@@ -103,6 +103,10 @@ class HomeTableViewController: UITableViewController {
             cell.profileImageView.image = UIImage(data: imageData)
         }
         
+        cell.profileImageView.layer.masksToBounds = false
+        cell.profileImageView.layer.cornerRadius = cell.profileImageView.frame.height/2
+        cell.profileImageView.clipsToBounds = true
+        
         return cell
     }
     
