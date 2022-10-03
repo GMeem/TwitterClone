@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,9 +13,11 @@
 		6EBCF52B21DF07FC00451C03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EBCF52921DF07FC00451C03 /* Main.storyboard */; };
 		6EBCF54421E047A500451C03 /* TwitterAPICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBCF54321E047A500451C03 /* TwitterAPICaller.swift */; };
 		6EBCF54E21E71F9400451C03 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EBCF54D21E71F9400451C03 /* Launch Screen.storyboard */; };
+		BE56AFE828EB6AD7004DFCB3 /* TweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE56AFE728EB6AD7004DFCB3 /* TweetViewController.swift */; };
 		BE90752128E2A2CB00E73C48 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE90752028E2A2CB00E73C48 /* LogInViewController.swift */; };
 		BE90752628E2A47D00E73C48 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE90752528E2A47D00E73C48 /* HomeTableViewController.swift */; };
 		BE90752828E2A4B000E73C48 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE90752728E2A4B000E73C48 /* TweetCell.swift */; };
+		BEA8885B28E3D56C00ACD986 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = BEA8885A28E3D56C00ACD986 /* Algorithms */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,7 @@
 		6EBCF54321E047A500451C03 /* TwitterAPICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterAPICaller.swift; sourceTree = "<group>"; };
 		6EBCF54D21E71F9400451C03 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		872C2D82F41D5A5D2A920E9E /* Pods_Twitter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Twitter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE56AFE728EB6AD7004DFCB3 /* TweetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetViewController.swift; sourceTree = "<group>"; };
 		BE90752028E2A2CB00E73C48 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		BE90752528E2A47D00E73C48 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		BE90752728E2A4B000E73C48 /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
@@ -39,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEA8885B28E3D56C00ACD986 /* Algorithms in Frameworks */,
 				504CFC1F641D05B5D40A0F17 /* Pods_Twitter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,6 +89,7 @@
 				BE90752028E2A2CB00E73C48 /* LogInViewController.swift */,
 				BE90752528E2A47D00E73C48 /* HomeTableViewController.swift */,
 				BE90752728E2A4B000E73C48 /* TweetCell.swift */,
+				BE56AFE728EB6AD7004DFCB3 /* TweetViewController.swift */,
 			);
 			path = Twitter;
 			sourceTree = "<group>";
@@ -115,6 +120,9 @@
 			dependencies = (
 			);
 			name = Twitter;
+			packageProductDependencies = (
+				BEA8885A28E3D56C00ACD986 /* Algorithms */,
+			);
 			productName = Twitter;
 			productReference = 6EBCF52221DF07FC00451C03 /* Twitter.app */;
 			productType = "com.apple.product-type.application";
@@ -144,6 +152,9 @@
 				Base,
 			);
 			mainGroup = 6EBCF51921DF07FC00451C03;
+			packageReferences = (
+				BEA8885928E3D56C00ACD986 /* XCRemoteSwiftPackageReference "swift-algorithms" */,
+			);
 			productRefGroup = 6EBCF52321DF07FC00451C03 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -211,6 +222,7 @@
 			files = (
 				BE90752628E2A47D00E73C48 /* HomeTableViewController.swift in Sources */,
 				6EBCF54421E047A500451C03 /* TwitterAPICaller.swift in Sources */,
+				BE56AFE828EB6AD7004DFCB3 /* TweetViewController.swift in Sources */,
 				BE90752828E2A4B000E73C48 /* TweetCell.swift in Sources */,
 				6EBCF52621DF07FC00451C03 /* AppDelegate.swift in Sources */,
 				BE90752128E2A2CB00E73C48 /* LogInViewController.swift in Sources */,
@@ -409,6 +421,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BEA8885928E3D56C00ACD986 /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-algorithms.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BEA8885A28E3D56C00ACD986 /* Algorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BEA8885928E3D56C00ACD986 /* XCRemoteSwiftPackageReference "swift-algorithms" */;
+			productName = Algorithms;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6EBCF51A21DF07FC00451C03 /* Project object */;
 }
