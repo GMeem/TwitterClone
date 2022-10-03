@@ -23,5 +23,5 @@ The following **bonus** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='twitter_walkthrough.gif' title='twitter_walkthrough' width='' alt='twitter_walkthrough' />
+<img src='walkthrough_twitter.gif' title='walkthrough_twitter' width='' alt='walkthrough_twitter' />
 
