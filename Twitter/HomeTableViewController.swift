@@ -108,6 +108,10 @@ class HomeTableViewController: UITableViewController {
             cell.profileImageView.image = UIImage(data: imageData)
         }
         
+        cell.setLike(tweetArray[indexPath.row]["favorited"] as! Bool)
+        cell.tweetID = tweetArray[indexPath.row]["id"] as! Int
+        cell.setRetweeted (tweetArray[indexPath.row]["retweeted"] as! Bool)
+        
         cell.profileImageView.layer.masksToBounds = false
         cell.profileImageView.layer.cornerRadius = cell.profileImageView.frame.height/2
         cell.profileImageView.clipsToBounds = true

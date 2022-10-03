@@ -10,7 +10,7 @@ import UIKit
 import BDBOAuth1Manager
 
 class TwitterAPICaller: BDBOAuth1SessionManager {    
-    static let client = TwitterAPICaller(baseURL: URL(string: "https://api.twitter.com"), consumerKey: "9gCaUlfbEVePRcqHCcC2VLpT4", consumerSecret: "QyQ329NmEbXD9JUEFhzo2pvQCRAJuGHnTgvWMB5GAetplZZsSC")
+    static let client = TwitterAPICaller(baseURL: URL(string: "https://api.twitter.com"), consumerKey: "s5UpcmsmYoGkGNoiaQabWCTjD", consumerSecret: "EkicrXWndq5wj8QRCZD0f91ndjhzAQDEX85B9OLjOUu9zRVHlp")
     var loginSuccess: (() -> ())?
     var loginFailure: ((Error) -> ())?
     
@@ -72,6 +72,36 @@ class TwitterAPICaller: BDBOAuth1SessionManager {
             failure(error)
         })
     
+    }
+    
+    func favoriteTweet(tweetID:Int, success: @escaping ()->(), failure: @escaping(Error)->() ){
+        let url = "https://api.twitter.com/1.1/favorites/create.json"
+        TwitterAPICaller.client?.post(url, parameters: ["id":tweetID], progress: nil, success: { (task: URLSessionDataTask, response: Any?) in
+            success()
+        }, failure: { (task: URLSessionDataTask?, error: Error) in
+            failure(error)
+        })
+        
+    }
+    
+    func unFavoriteTweet(tweetID:Int, success: @escaping ()->(), failure: @escaping(Error)->() ){
+        let url = "https://api.twitter.com/1.1/favorites/destroy.json"
+        TwitterAPICaller.client?.post(url, parameters: ["id":tweetID], progress: nil, success: { (task: URLSessionDataTask, response: Any?) in
+            success()
+        }, failure: { (task: URLSessionDataTask?, error: Error) in
+            failure(error)
+        })
+        
+    }
+    
+    func retweetTweet(tweetID:Int, success: @escaping ()->(), failure: @escaping(Error)->() ){
+        let url = "https://api.twitter.com/1.1/statuses/retweet/\(tweetID).json"
+        TwitterAPICaller.client?.post(url, parameters: ["id":tweetID], progress: nil, success: { (task: URLSessionDataTask, response: Any?) in
+            success()
+        }, failure: { (task: URLSessionDataTask?, error: Error) in
+            failure(error)
+        })
+        
     }
     
 }
