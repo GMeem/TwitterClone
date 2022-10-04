@@ -42,7 +42,7 @@ class TweetViewController: UIViewController, UITextViewDelegate {
     }
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        let lim = 140
+        let lim = 280
         
         let currentText = textView.text ?? ""
         guard let stringRange = Range(range, in: currentText) else {
